@@ -62,8 +62,6 @@ std::vector<uint64_t> primes = {
  * Unit tests.
  */
 
-
-
 TEST_CASE("Task1 test (brute)", "[calculateFirstNPrimeNumbersBrute]") {
     REQUIRE_THAT(calculateFirstNPrimeNumbersBrute(1000), Catch::Matchers::Equals(primes));
 }

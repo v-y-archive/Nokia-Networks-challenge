@@ -1,3 +1,2 @@
 language = "cpp"
-onBoot = "install-pkg clang-10 clang-tidy"
-run = "command -v clang++-10 || install-pkg clang-10 clang-tidy && clear\n make test && ./test"#\n make clean > /dev/null"
+run = "make test && ./test"

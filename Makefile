@@ -1,6 +1,6 @@
-CXX=clang++-10
-CFLAGS=-c -std=c++20 -Wall -Wextra -Wsign-conversion -Wvla -Werror \
-	-fstack-protector #-fsanitize=address -fsanitize=undefined -fno-sanitize-recover=all
+CXX=clang++
+CFLAGS=-c -std=c++17 -Werror -Wall -Wextra -Wsign-conversion -Wvla# \
+	-fstack-protector# -fsanitize=address -fsanitize=undefined -fno-sanitize-recover=all
 LFLAGS=
 
 test: Task1.test.o Task2.test.o Task3.test.o Task4.test.o Task5.test.o Test.o
@@ -9,9 +9,9 @@ test: Task1.test.o Task2.test.o Task3.test.o Task4.test.o Task5.test.o Test.o
 %.test.o: src/%.cpp src/%.test.cpp
 	$(CXX) $(CFLAGS) src/$*.test.cpp
 Test.o: src/Test.cpp
-	$(CXX) -c -std=c++20 src/Test.cpp
+	$(CXX) $(CFLAGS) src/Test.cpp
 
-.PHONY: clean tidy format wtf
+.PHONY: clean tidy format tf
 
 clean:
 	rm -rf *.o test

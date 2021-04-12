@@ -8,3 +8,4 @@
  *
  * Write a function that removes every fifth (5) element from this list.
  */
+ 
