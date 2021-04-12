@@ -62,10 +62,10 @@ std::vector<uint64_t> primes = {
  * Unit tests.
  */
 
-TEST_CASE("Task1 test (brute)", "[calculateFirstNPrimeNumbersBrute]") {
+TEST_CASE("Task 1 test (brute)", "[calculateFirstNPrimeNumbersBrute]") {
     REQUIRE_THAT(calculateFirstNPrimeNumbersBrute(1000), Catch::Matchers::Equals(primes));
 }
 
-TEST_CASE("Task1 test (Miller-Rabin)", "[calculateFirstNPrimeNumbers]") {
+TEST_CASE("Task 1 test (Miller-Rabin)", "[calculateFirstNPrimeNumbers]") {
     REQUIRE_THAT(calculateFirstNPrimeNumbers(1000), Catch::Matchers::Equals(primes));
 }

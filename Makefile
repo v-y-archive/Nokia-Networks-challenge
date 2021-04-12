@@ -1,6 +1,5 @@
-CXX=clang++
-CFLAGS=-c -std=c++17 -Werror -Wall -Wextra -Wsign-conversion -Wvla# \
-	-fstack-protector# -fsanitize=address -fsanitize=undefined -fno-sanitize-recover=all
+CXX=clang++-8
+CFLAGS=-c -std=c++2a -Werror -Wall -Wextra -Wsign-conversion -Wvla -fstack-protector
 LFLAGS=
 
 test: Task1.test.o Task2.test.o Task3.test.o Task4.test.o Task5.test.o Test.o
