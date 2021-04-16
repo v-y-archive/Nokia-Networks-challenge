@@ -12,11 +12,11 @@
 #include "LList.hpp"
 
 void removeEveryFifth(LList* nodeptr) {
-	for (int i = 1; nodeptr; i++) {
-		if (i % 5 == 4) {
-			nodeptr->next = nodeptr->next ? nodeptr->next->next : nullptr;
-			i++;
-		}
+    for (int i = 1; nodeptr; i++) {
+        if (i % 5 == 4) {
+            nodeptr->next = nodeptr->next ? nodeptr->next->next : nullptr;
+            i++;
+        }
         nodeptr = nodeptr->next;
-	}
+    }
 }
