@@ -9,7 +9,7 @@ using Catch::Matchers::Equals;
  */
 
 LList* vectorToLList(std::vector<int> vector) {
-    static LList* result = nullptr;
+    LList* result = nullptr;
     LList* prev = nullptr;
     for (int payload : vector) {
         LList* nodeptr = new LList { nullptr, payload };
@@ -22,12 +22,11 @@ LList* vectorToLList(std::vector<int> vector) {
 
 auto llistToVector(LList* nodeptr) {
     std::vector<int> result;
-    for (; nodeptr != nullptr; nodeptr = nodeptr->next) {
+    for (; nodeptr; nodeptr = nodeptr->next) {
         result.push_back(nodeptr->payload);
     }
     return result;
 }
-
 
 /**
  * Unit tests.
@@ -38,7 +37,7 @@ TEST_CASE("Task 3 test", "[removeEveryFifth]") {
     std::vector<int> expected = { 2, 4, 8, 16,    };
 
     removeEveryFifth(list);
-    auto result = llistToVector(list);
+    std::vector<int> result = llistToVector(list);
 
     REQUIRE_THAT(result, Catch::Matchers::Equals(expected));
 }
@@ -48,7 +47,7 @@ TEST_CASE("Task 3 other test", "[removeEveryFifth]") {
     std::vector<int> expected = { 2, 4, 8, 16,     64, 128 };
 
     removeEveryFifth(list);
-    auto result = llistToVector(list);
+    std::vector<int> result = llistToVector(list);
 
     REQUIRE_THAT(result, Catch::Matchers::Equals(expected));
 }
@@ -58,7 +57,7 @@ TEST_CASE("Task 3 another test", "[removeEveryFifth]") {
     std::vector<int> expected = { 2, 4, 8, 16,     64, 128, 256, 512,       2048, 4096, 8192 };
 
     removeEveryFifth(list);
-    auto result = llistToVector(list);
+    std::vector<int> result = llistToVector(list);
 
     REQUIRE_THAT(result, Catch::Matchers::Equals(expected));
 }

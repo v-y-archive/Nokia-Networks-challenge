@@ -4,6 +4,7 @@
 
 #include <inttypes.h>
 #include <vector>
+#include <map>
 
 // Calculate a^n % mod
 size_t power(size_t a, size_t n, size_t mod) {
@@ -88,9 +89,6 @@ std::vector<uint64_t> calculateFirstNPrimeNumbersBrute(size_t n) {
 
     primes.push_back(2);
     for (uint64_t i = 3; primes.size() < n; i += 2) {
-        if (i > 10 && ((i & 1) == 0 || i % 10 == 0))
-            continue;
-
         if ([primes, i]() {
             for (uint64_t j : primes) {
                 if (j * j - 1 > i)
@@ -117,9 +115,6 @@ std::vector<uint64_t> calculateFirstNPrimeNumbers(size_t n) {
 
     primes.push_back(2);
     for (uint64_t i = 3; primes.size() < n; i += 2) {
-        if (i > 10 && !(i & 1))
-            continue;
-
         if (isPrimeMR(i))
             primes.push_back(i);
     }
