@@ -1,4 +1,4 @@
-# Hello, this is Nokia Networks test task
+# Hello, this is Nokia Networks challenge
 
 ```
 $ make test
