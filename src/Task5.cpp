@@ -11,10 +11,11 @@
  * paths in the tree that have such depth.
  */
 
-#include "TreeNode.hpp"
 #include <string>
 #include <vector>
 #include <iostream>
+
+#include "TreeNode.hpp"
 
 std::vector<std::string> getXLongPaths(TreeNode* node, int x) {
     if (!node->leftChild && !node->rightChild) {

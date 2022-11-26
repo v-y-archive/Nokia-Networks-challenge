@@ -1,7 +1,9 @@
-#include "../libs/catch.hpp"
-#include "Task5.cpp"
-#include "TreeNode.hpp"
 #include <vector>
+
+#include "catch.hpp"
+#include "TreeNode.hpp"
+#include "../src/Task5.cpp"
+
 using Catch::Matchers::Equals;
 
 /**

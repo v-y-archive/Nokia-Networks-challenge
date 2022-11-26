@@ -1,12 +1,12 @@
 /**
- * There is a List:
+ * There is a list:
  *
- * struct List {
- *     struct List* next;
+ * struct LList {
+ *     struct LList* next;
  *     SomeDataType payload;
  * }
  *
- * Write a function that removes every fifth (5) element from this LList.
+ * Write a function that removes every fifth (5) element from this linked list.
  */
 
 #include "LList.hpp"

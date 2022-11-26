@@ -1,7 +1,9 @@
-#include "../libs/catch.hpp"
-#include "../libs/json.hpp"
-#include "Task2.cpp"
 #include <map>
+
+#include "catch.hpp"
+#include "json.hpp"
+#include "../src/Task2.cpp"
+
 using namespace nlohmann;
 
 /**

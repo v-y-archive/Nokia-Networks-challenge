@@ -1,6 +1,8 @@
-#include "../libs/catch.hpp"
-#include "Task1.cpp"
 #include <vector>
+
+#include "catch.hpp"
+#include "../src/Task1.cpp"
+
 using Catch::Matchers::Equals;
 
 // clang-format off

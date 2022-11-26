@@ -1,7 +1,9 @@
-#include "../libs/catch.hpp"
-#include "../libs/json.hpp"
-#include "Task4.cpp"
 #include <vector>
+
+#include "catch.hpp"
+#include "json.hpp"
+#include "../src/Task4.cpp"
+
 using namespace nlohmann;
 
 /**

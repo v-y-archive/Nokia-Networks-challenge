@@ -26,4 +26,5 @@
 *.exe
 *.out
 *.app
-test
+test/test
+main

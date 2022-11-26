@@ -7,7 +7,6 @@
 #include <inttypes.h>
 #include <tuple>
 
-
 std::tuple <uint32_t, uint32_t> squeezeOutEverythingOfThisBits(uint32_t n) {
     uint32_t popcount = static_cast<uint32_t>(__builtin_popcount(n));
 

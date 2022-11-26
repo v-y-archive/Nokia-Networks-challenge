@@ -1,7 +1,9 @@
-#include "../libs/catch.hpp"
-#include "Task3.cpp"
-#include "LList.hpp"
 #include <vector>
+
+#include "catch.hpp"
+#include "LList.hpp"
+#include "../src/Task3.cpp"
+
 using Catch::Matchers::Equals;
 
 /**
